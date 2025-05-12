@@ -20,11 +20,6 @@ body {
     padding: 40; /* Remove default padding */
 }
 
-body * {
-
-    caret-color: transparent; /* Hides the blinking cursor */
-}
-
 /* background-color: #6d1c1c; Blue background */
 header {
     
@@ -187,9 +182,7 @@ footer p {
     border-radius: 5px;       /* Rounded corners */
     font-size: 16px;          /* Font size */
     max-width: 300px;             /* Fixed width */
-    resize: none;
 }
-
 
 
 button {
@@ -202,30 +195,8 @@ button {
     font-weight: bold;
     padding-left: 30px;
     padding-right: 30px;
-    width: 150px; 
 }
 
-button:hover {
-    background: radial-gradient(circle, rgba(255, 38, 31, 0.6) 0%, rgb(141, 39, 13) 80%);
-}
-
-.outerContainer {
-    display: flex;
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-}
-
-.containerBox {
-    display: flex;
-    justify-content: flex-start; /* Align to the left */
-    align-items: center; /* Center vertically */
-    width: auto; /* Make sure it spans the entire width */
-
-}
-
-.optionsBox {
-    text-align: left; 
-}
 
 pre { 
         background-color: #f0f0f0; /* Softer light blue */

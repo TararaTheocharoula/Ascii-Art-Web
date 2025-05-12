@@ -15,9 +15,6 @@ func main() {
 	mux.HandleFunc("/project", handlers.PgProject)
 	mux.HandleFunc("/converter", handlers.PgConverter)
 	mux.HandleFunc("/team", handlers.PgTeam)
-	mux.HandleFunc("/download", handlers.HandleDownload)
-	mux.HandleFunc("/check-file", handlers.HandleCheckFile)
-	mux.HandleFunc("/export-zip", handlers.HandleExportZip)
 
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
 		if r.URL.Path == "/" {

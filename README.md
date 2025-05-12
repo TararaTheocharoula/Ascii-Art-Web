@@ -1,154 +1,139 @@
-ASCII Art Web Export
-Description
 
-ASCII Art Web Export is a Go-based web application that extends the functionality of the ASCII Art project. This application enables users to generate ASCII art and export the generated output as a file, specifically in .txt format. It adheres to HTTP standards by including appropriate headers such as Content-Type, Content-Length, and Content-Disposition for file transfer. The application provides a simple and user-friendly interface, including a download button, for seamless exporting of the generated ASCII art.
-Features
+# 🎨 **ASCII Art Stylize** 🌟
 
-    ASCII Art Export:
-        Export the generated ASCII art output as a .txt file.
+This README provides a comprehensive guide to the ASCII Art Stylize application, a project focused on enhancing the user experience of ASCII Art Web through better design and interactivity.
 
-    Correct File Permissions:
-        The exported file is created with read and write permissions for the user.
+---
 
-    HTTP Headers:
-        The web server uses the required HTTP headers (Content-Type, Content-Length, and Content-Disposition) for file transfer.
+## **Description**
 
-    Error Handling:
-        User-friendly error messages are displayed if:
-            The ASCII art output is empty.
-            The output file is missing or deleted.
+ASCII Art Stylize is an enhanced version of the ASCII Art Web application, designed with the following objectives:
 
-    Standards and Best Practices:
-        Built entirely with Go standard libraries, ensuring clean and maintainable code.
+- **More Appealing**: Modern and visually attractive design.
+- **Interactive and Intuitive**: Improved navigation and user engagement.
+- **User-Friendly**: Simple, accessible interface.
+- **Responsive**: Works seamlessly on different devices and screen sizes.
+- **Consistent Design**: Uniform appearance and functionality throughout.
+- **Color Accessibility**: Ensures text readability regardless of color schemes.
 
-Requirements
+---
 
-    Go (version 1.16 or later)
-    Browser to access the web application
-    No additional Go packages are required (only standard packages are used)
+## **Features**
 
-How to Run
+1. **Enhanced User Interface**:
+   - Dynamic and responsive design using **CSS**.
+   - Intuitive navigation and user feedback mechanisms.
+   - Improved layout for a seamless user experience.
 
-    Clone the Repository:
+2. **Interactive Elements**:
+   - Buttons, animations, and hover effects enhance interactivity.
+   - Instant feedback for user actions.
 
-git clone https://github.com/yourusername/ascii-art-web-export.git
-cd ascii-art-web-export
+3. **Accessible and Consistent Design**:
+   - Adheres to web accessibility standards.
+   - Consistent color schemes and layouts.
 
-Run the Application:
+4. **Built with Go**:
+   - Leverages the simplicity and efficiency of Go.
+   - Maintains adherence to good coding practices.
 
-    Start the Go server:
+---
 
-        go run main.go
+## **Usage: How to Run**
 
-    Access the Application:
-        Open your browser and go to: http://localhost:8080/home
+### **Prerequisites**
 
-    Generate and Export ASCII Art:
-        Navigate to the converter page.
-        Generate ASCII art.
-        Click the "Download" button to export the output as a .txt file.
+1. **Install Go**: Ensure Go 1.19+ is installed.
+2. **Clone the Repository**:
 
-How to Export ASCII Art
+    ```bash
+    git clone https://platform.zone01.gr/git/sntentop/ascii-art-web-stylize.git
+    cd ascii-art-stylize
+    ```
 
-    Navigate to the Converter page.
-    Enter the text to generate ASCII art.
-    Click "Generate" to create the ASCII art output.
-    Click "Download" to export the file as a .txt.
 
-Error Handling
+### **Steps to Run**
 
-    Empty ASCII Art:
-        Displays an alert: "You should generate your ASCII-ART before downloading."
-    Missing File:
-        Displays an alert: "The output.txt file is missing. Please generate your ASCII-ART again."
+1. **Navigate to the Project Root Directory**:
 
-Project Structure
+    ```bash
+    cd ascii-art-stylize
+    ```
 
-```bash
-ASCII-ART-WEB-EXPORT/
-├── handlers/
-│   ├── handlers_download.go   # Handles file download functionality
-│   ├── handlers_export.go     # Handles file export logic
-│   ├── handlers_logger.go     # Handles logging
-│   ├── handlers_static.go     # Serves static files
-│   ├── handlers_utils.go      # Utility functions
-│   └── handlers.go            # General handlers and routes
-├── static/
-│   ├── banners/                       # ASCII art banner files
-│   │   ├── shadow.txt
-│   │   ├── standard.txt
-│   │   └── thinkertoy.txt
-│   ├── css/                           # Styles and fonts
-│   │   ├── fonts/
-│   │   │   ├── Cybrpnuk2.ttf
-│   │   │   ├── The_Globe.ttf
-│   │   │   └── Vintage_Brother.ttf
-│   │   └── style.css
-│   └── img/                           # Images for the web UI
-│       ├── 400.png
-│       ├── 404.png
-│       ├── 500.png
-│       ├── snetop.jpg
-│       ├── ttarara.jpg
-│       └── xkissas.jpg
-├── temp/                              # Temporary files directory
-│   └── output.txt                     # ASCII art output file
-├── templates/                         # HTML templates
-│   ├── code_400.html
-│   ├── code_404.html
-│   ├── code_500.html
-│   ├── Index.html
-│   ├── PgConverter.html
-│   ├── PgHome.html
-│   ├── PgProject.html
-│   └── PgTeam.html
-├── go.mod                             # Go module file
-├── main.go                            # Application entry point
-└── README.md                          # Project documentation
-```
+2. **Run the Application**:
 
-Best Practices Followed
+    ```bash
+    go run .
+    ```
 
-    Code Modularity:
-        Handlers are organized into a dedicated handlers package for clarity and maintainability.
+3. **Open the Application**:
 
-    Standard Go Packages:
-        The project uses only Go standard packages to meet the project requirements.
+    Navigate to:
 
-    HTTP Standards:
-        The application adheres to HTTP standards for headers and file transfers.
+    ```
+    http://localhost:8080
+    ```
 
-Lessons Learned
+4. **Stop the Server**:
 
-Examples of API Interaction
-Example 1: Downloading a .txt File
+    Press **CTRL+C** to stop the application.
 
-    Endpoint: /download
-    Method: GET
-    Client Interaction:
-        The browser or JavaScript triggers the download.
-    Server Response:
-        The file is served as an attachment with appropriate headers:
+---
 
-Content-Type: text/plain
-Content-Disposition: attachment; filename="output.txt"
+### **CSS Integration**
 
-This project helped deepen understanding of:
+- **Styling**:
+  - Defines visual design elements such as colors, fonts, and layouts.
+  - Ensures text readability regardless of colors.
 
-    File Export Mechanisms:
-        Generating and exporting files in .txt format with appropriate permissions.
+- **Responsiveness**:
+  - Adapts the layout to different screen sizes.
 
-    HTTP Headers:
-        Implementing Content-Type, Content-Length, and Content-Disposition.
+- **Consistency**:
+  - Applies a uniform style across the application.
 
-    Web Development in Go:
-        Building a web application using only standard Go packages.
+### **Go Backend**
 
-    Error Handling:
-        Handling user interactions and providing clear feedback for errors.
+- Implements server logic and renders HTML templates.
+- Handles HTTP requests and responses efficiently.
 
-License
+---
 
-This project is licensed under the MIT License.
+## **Testing**
 
-Feel free to fork, modify, and contribute to the project!
+### **Unit Testing (Go Code)**
+
+1. **Run Tests**:
+
+    ```bash
+    go test ./...
+    ```
+
+2. **Coverage**:
+   Includes tests for:
+   - Template rendering.
+   - HTTP request handling.
+
+### **Browser Testing**
+
+1. Open the application in a browser.
+2. Verify responsiveness and interactivity.
+3. Ensure color accessibility.
+
+---
+
+## **Authors**
+
+- **Theocharoula Tarara** (*ttarara*)
+- **Christoforos Kissas** (*xkissas*)
+- **Stefanos Ntentopoulos** (*sntentop*)
+
+---
+
+## **License**
+
+This project is licensed under the MIT License. Feel free to use, modify, and distribute it.
+
+---
+
+🎉 Enjoy building your ASCII Art Stylized web application! 🚀
